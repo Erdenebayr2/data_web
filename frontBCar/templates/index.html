@@ -1,0 +1,299 @@
+{% extends './base/base.html' %}
+{% block header %}
+    <div class="grid grid-cols-4 gap-6 mt-5 mx-10">
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Үл хөдлөх хөрөнгө
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                    <a class="hover:text-green-500" onclick="myFunction()" href="#">
+                        <input type="submit" name="apartZ" value="Үл хөдлөх зарна"></a>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="apartT" value="Үл хөдлөх түрээслүүлнэ"></a>
+                    </form>
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px] ">
+            <input type="checkbox" />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Автомашин
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                    <a class="hover:text-green-500" onclick="myFunction()" href="#">
+                        <input type="submit" name="autoZ" value="Автомашин зарна"></a><br>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="autoT" value="Авто түрээслүүлнэ"></a><br>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="autoT" value="Авто дугуй, обуд"></a><br>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="autoT" value="Ачааны машин, автобус, хүнд механизм"></a><br>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="autoT" value="Мотоцикл, мопед"></a><br>
+                    <a class="hover:text-green-500" onclick="myFunction()" >
+                        <input type="submit" name="autoT" value="Авто сэлбэг, туслах хэрэгслүүд"></a><br>
+                    </form>
+                </div>
+        </div> 
+
+        
+        
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Хувцас хэрэглэл
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Эмэгтэй хувцас"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Эрэгтэй хувцас"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гутал, пүүз"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Малгай, цүнх"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гоёл чимэглэл, бугуйн цаг"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Ажлын хувцас"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бусад"></a>
+                    </form>
+                </div>
+        </div>
+        
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Ажлын зар
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Авто үйлчилгээ, засвар"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Аялал жуулчлал, зочид буудал"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Банк, санхүү, нябо, нярав"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Барилга, дэд бүтэц"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Боловсрол, шинжлэх ухаан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гоо сайхан, фитнес, спорт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гүйцэтгэх удирдлага"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Дизайн, урлаг, уран сайхан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Захиргаа, Хүний нөөц"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Маркетинг, PR менежмент"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="МТ, харилцаа холбоо"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Менежер, төлөөлөгч"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Pесторан, кафе, паб"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Сэтгүүлч, редактор (ХМХ)"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тээвэр, гааль, агуулах"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Туслах ажилчин"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Уул уурхай"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Харуул хамгаалалт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="ХАА, Байгаль экологи"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хууль, эрх зүй"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Эрүүл мэнд, эм зүй"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Үйлдвэрлэл"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Үйлчилгээ"></a>
+                    </form>
+                </div>
+        </div>
+        
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Компьютер сэлбэг хэрэгсэл
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Суурин компьютер"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Notebook"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="PS, XBox, Nintendo"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Принтер, хувилагч, сканнер"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Сэлбэг"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="iPad, tablet"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Принтерийн хор, бичгийн цаас"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Дагалдах хэрэгсэл"></a>
+                    </form>
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Цахилгаан бараа
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Фото, видео камер"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="ТВ, Аudio + Video"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гал тогооны цахилгаан бараа"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Зуух, халаагуур"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Угаалгын машин"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тоос сорогч, хивс угаагч, индүү"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Агааржуулагч, сэнс"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Оёдлын машин"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бусад"></a>
+                    </form>
+            
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Гэр ахуйн бараа
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Абажур, гэрэл, чийдэн"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бөс бараа, торго"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гал тогооны хэрэгсэл, сав суулга"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гэрийн чимэглэл, тохижилт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Монгол гэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тавилга"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хивс, дорож, дэвсгэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хөшиг, цагаан хэрэглэл, хөнжил, дэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Угаалга, цэвэрлэгээний хэрэгсэл"></a>
+                    </form>
+            
+                </div>
+        </div>
+        
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Төхөөрөмж, материал, түлш
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Барилгын материал"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тоног төхөөрөмж, багаж хэрэгсэл"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Түлээ, нүүрс, түлш"></a>
+                    </form>
+                </div>
+        </div>
+        
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Эрүүл мэнд, гоо сайхан, хүнс
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Эрүүл мэнд"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гоо сайхан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хүнс"></a>
+                    </form>
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Мал амьтан, ургамал
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Мал амьтан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Түүхий эд, ноос"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Ургамал, мод, цэцэг"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хөрс, бордоо, ургамал хамгаалал"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бусад"></a>
+                    </form>
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Амралт спорт, 
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Абажур, гэрэл, чийдэн"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бөс бараа, торго"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гал тогооны хэрэгсэл, сав суулга"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Гэрийн чимэглэл, тохижилт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Монгол гэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тавилга"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хивс, дорож, дэвсгэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хөшиг, цагаан хэрэглэл, хөнжил, дэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Угаалга, цэвэрлэгээний хэрэгсэл"></a>
+                    </form>
+            
+                </div>
+        </div>
+
+        <div class="collapse rounded-[25px]  ">
+            <input type="checkbox" class=" " />
+                <div class="collapse-title btn menu-button m-1 rounded-[25px]">
+                    Үйлчилгээ
+                </div>
+                <div class="collapse-content">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Авто засвар"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Амралт, сувилал"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Аялал жуулчлал"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Байгаль орчны үнэлгээ, нөхөн сэргээлт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Барилгын бүх ажил"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Баярын худалдаа, үйлчилгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бүх  цэвэрлэгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Жолоочийн үйлчилгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Компани зарна"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Компьютер, интернет"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Мөнгө санхүү, зээл"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Нүүлгэлт, тээвэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Оёдол, хатгамал..."></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Орчуулга, бичих, шивэх"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoZ" value="Хоол захиалга"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Сургалт, курс"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тавилга, мужаан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Тайлан, төсөл"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Түлхүүр, цоож засвар"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Уран зураг, баримал, сийлбэр"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Ургамал, мод тарих"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Уул уурхайн, өрөмдлөгийн үйлчилгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Үсчин , гоо сайхан"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Харуул, хамгаалалт"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хөрөнгө зуучлал, үнэлгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хууль, эрх зүйн"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хүүхэд асрах"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Хэвлэл, реклам, медиа"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Цахилгаан бараа засвар"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Эмнэлэг, эмчилгээ"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Олсон, гээсэн баримт бичиг"></a>
+                        <a class="hover:text-green-500" onclick="myFunction()" ><input type="submit" name="autoT" value="Бусад"></a>
+                    </form>
+                </div>
+        </div>
+                <!-- Put this part before </body> tag -->
+                <div class="modal" id="my-modal-2">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Та татаж авах уу!</h3>
+                    <div class="modal-action">
+                    <a href="#" class="btn">Тийм</a>
+                    <a href="#" class="btn">Үгүй</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Put this part before </body> tag -->
+                <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                </div>
+                </div>
+    </div>
+
+   
+{% endblock%}
