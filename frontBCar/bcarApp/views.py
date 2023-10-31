@@ -4,7 +4,7 @@ from django.views import View
 from django.http import Http404
 import os,asyncio,json,openpyxl
 import pandas as pd
-from bcarApp.givedata import main
+from bcarApp.autodata import main
 
 class DownloadFileView(View):
     def get(self,request,*args,**kwargs):
@@ -54,8 +54,7 @@ class DownloadFileView(View):
                 response = HttpResponse(fh.read(), content_type='application/vnd.ms-excel')
                 response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(file_path)
                 return response
-        return render(request, 'index.html')
-
+        return redirect('index')
 
 def index(request):
     global mlink
